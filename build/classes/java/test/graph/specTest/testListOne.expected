@@ -1,0 +1,6 @@
+#List One Test File
+#Tests that a graph can be created, one node added and printed out.
+
+created graph graph1
+added node n1 to graph1
+graph1 contains: n1

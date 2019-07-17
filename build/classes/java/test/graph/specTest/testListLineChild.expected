@@ -1,0 +1,17 @@
+#List Line Child Test File
+#Tests that a graph can be created and a set of nodes and edges can be added in the orientation of a single line and when
+#asked to print the children of the first few nodes, only one child is printed out despite they're being children of their child.
+
+created graph graph1
+added node a to graph1
+added node b to graph1
+added node c to graph1
+added node d to graph1
+
+added edge edgeA from a to b in graph1
+added edge edgeB from b to c in graph1
+added edge edgeC from c to d in graph1
+
+the children of a in graph1 are: b(edgeA)
+the children of b in graph1 are: c(edgeB)
+the children of c in graph1 are: d(edgeC)

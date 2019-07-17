@@ -1,0 +1,9 @@
+#Add Double Edge Test File
+#Tests that a graph can be created, two nodes added and two edges going from the same source node to the same
+#destination node but with different labels
+
+CreateGraph graph1
+AddNode graph1 node1
+AddNode graph1 node2
+AddEdge graph1 node1 node2 edge1
+AddEdge graph1 node1 node2 edge2

@@ -1,0 +1,16 @@
+I collaborated with Ani Harriott.
+
+On Problem 1, we helped each other to understand what the question was explicitly
+asking for and helped to differentiate between exposing a representation
+and a representation invariant.
+
+On problem 2, we discussed the basic functions of a graph and helped each other to
+understand what a graph should and shouldn't be able to do as a result of reading
+the spec and spec test script files. As a result of this, we helped to develop and
+brainstorm methods that should and should not be present within the classes. We also
+helped to verify how certain fields should interact or be referenced between classes.
+
+On problem 3, we mostly helped each other to understand how test methods are
+syntactically written. In addition, if one of us was having trouble writing
+a test case or method, we helped each other talk out one another's thought
+process and brainstormed solutions to the issue.

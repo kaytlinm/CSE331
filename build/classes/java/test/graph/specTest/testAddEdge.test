@@ -1,0 +1,7 @@
+#Add Edge Test File
+#Tests that a graph can be created, two nodes can be added and an edge can be added connecting the two nodes
+
+CreateGraph graph1
+AddNode graph1 node1
+AddNode graph1 node2
+AddEdge graph1 node1 node2 edge1

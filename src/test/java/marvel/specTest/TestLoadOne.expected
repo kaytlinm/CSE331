@@ -1,0 +1,4 @@
+#Tests that a singular graph can be loaded from a .tsv file
+
+loaded graph graph1
+the children of Bob in graph1 are: Cole(vol1) Erin(vol4) Sue(vol1)

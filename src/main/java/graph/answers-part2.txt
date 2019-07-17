@@ -1,0 +1,41 @@
+Kaytlin Melvin
+
+Problem 1:
+    (a) An advantage of a collection is security of the representation towards clients as
+        there is not a lot of accessible data but a disadvantage is there would need to be
+        many more method calls and iterations to reach desired data about nodes and connections.
+        A disadvantage of an adjacency list is that it would be difficult to access any incoming
+        edges to a node but an advantage is ease of finding a path as outgoing edge and children
+        data is easily accessible. An advantage of an adjacency matrix is that no additional
+        methods or computations would be necessary to determine connections, however, a
+        disadvantage is that there is no direct access or storage of nodes and that would require
+        additional methods.
+    (b) I chose a Collection of both edges and nodes because it would allow me easy
+        access to information about both the edges and nodes in the graph without having excess
+        information and methods in Graph, my Node class has the collection data of all incoming
+        and outgoing edges. An advantage of this is that there is not an excess of methods and
+        computations to access information about nodes, edges and connections, while a
+        disadvantage is that all of the data concerning connections (sources and destinations
+         of edges, incoming and outgoing edges) is stored in a separate Node class.
+
+Problem 4:
+    Testing - I didn't add any new test classes but I added additional assert statements
+        and changed the way I provided expected outputs as after I implemented and ran the test
+        suites, I had a better understanding of how the test methods handled the expected data.
+        I added additional assert statements because after implementation I realized that I
+        wanted to verify that after addition and deletion of nodes or edges that they were not
+        only removed from the graph's collections but also from the appropriate nodes. I added
+        assert statements that verified that when an edge was deleted from the graph, it also
+        deleted from the source and destination node data. I added new test methods to my
+        node testing to handle my addition of equals and hashCode methods to my Node class.
+
+    Specification - To my spec specifically, I added handling components when duplicates are
+        attempted to be added or when a nonexistent node or edge is removed as a result of
+        part 1 feedback. I added equals and hashCode methods to my Node class because I realized
+        that during implementation, I was comparing Nodes often to ensure no duplicates were added
+        or when handling edge source and destination information. I added a Set of Edges to my
+        Graph class because upon implementation I realized that it would be easiest to find and
+        verify connections if there was a collection of all edges in the graph accessible
+        within the Graph class. It also made it simpler in the testing suites to verify that an
+        edge was actually removed from or if a duplicated existed within the graph representation.
+

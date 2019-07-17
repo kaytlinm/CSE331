@@ -1,0 +1,4 @@
+#Create Graph Test File
+#Tests that a Graph can be created
+
+CreateGraph g1

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="marvel.implTest.CheckAsserts" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-05-25T00:59:56" hostname="attu2.cs.washington.edu" time="0.0">
+  <properties/>
+  <testcase name="testAssertEnabled" classname="marvel.implTest.CheckAsserts" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,5 @@
+#Add Node Test File
+#Tests that a graph can be created and a single node can be added to the graph
+
+created graph graph1
+added node node1 to graph1

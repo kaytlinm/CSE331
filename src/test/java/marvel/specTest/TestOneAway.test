@@ -1,0 +1,9 @@
+#Tests that a path can be found between two nodes that have intermediate connections (1 single edge)
+
+CreateGraph graph
+AddNode graph B
+AddNode graph C
+AddNode graph D
+AddEdge graph B C e
+
+FindPath graph B C

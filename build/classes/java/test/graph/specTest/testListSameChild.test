@@ -1,0 +1,12 @@
+#List Same Child Test File
+#Tests that a graph can be created and two edges with same source, destination and different labels can be printed
+#as two different children.
+
+CreateGraph graph1
+AddNode graph1 a
+AddNode graph1 b
+
+AddEdge graph1 a b edgeA
+AddEdge graph1 a b edgeB
+
+ListChildren graph1 a

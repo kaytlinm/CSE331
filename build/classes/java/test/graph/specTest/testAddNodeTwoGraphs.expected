@@ -1,0 +1,7 @@
+#Add Same Node to Two Graphs Test File
+#Tests that two graphs can be created and that the same node can be added to the graphs separately
+
+created graph graph1
+created graph graph2
+added node node1 to graph1
+added node node1 to graph2

@@ -1,0 +1,7 @@
+#Tests that two independent graphs can be loaded from two independent .tsv files
+
+LoadGraph graph1 smallTest.tsv
+LoadGraph graph2 staffSuperheroes.tsv
+
+ListChildren graph1 Bob
+ListChildren graph2 Ernst-the-Bicycling-Wizard

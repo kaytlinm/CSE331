@@ -1,0 +1,5 @@
+#List None Test File
+#Tests that a graph can be created and that all nodes listed is none.
+
+created graph graph1
+graph1 contains:

@@ -1,0 +1,17 @@
+#List Line Child Test File
+#Tests that a graph can be created and a set of nodes and edges can be added in the orientation of a single line and when
+#asked to print the children of the first few nodes, only one child is printed out despite they're being children of their child.
+
+CreateGraph graph1
+AddNode graph1 a
+AddNode graph1 b
+AddNode graph1 c
+AddNode graph1 d
+
+AddEdge graph1 a b edgeA
+AddEdge graph1 b c edgeB
+AddEdge graph1 c d edgeC
+
+ListChildren graph1 a
+ListChildren graph1 b
+ListChildren graph1 c

@@ -1,0 +1,8 @@
+#List Multiple Test File
+#Tests that a graph can be created, multiple (3) nodes can be added and printed out.
+
+created graph graph1
+added node a to graph1
+added node b to graph1
+added node c to graph1
+graph1 contains: a b c

@@ -1,0 +1,8 @@
+#Add Dual Way Edge Test File
+#Tests that a graph can be created, two edges can be created, and two edges can be added in opposing directions.
+
+CreateGraph graph1
+AddNode graph1 node1
+AddNode graph1 node2
+AddEdge graph1 node1 node2 edge1
+AddEdge graph1 node2 node1 edge2

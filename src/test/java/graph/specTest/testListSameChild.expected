@@ -1,0 +1,12 @@
+#List Same Child Test File
+#Tests that a graph can be created and two edges with same source, destination and different labels can be printed
+#as two different children.
+
+created graph graph1
+added node a to graph1
+added node b to graph1
+
+added edge edgeA from a to b in graph1
+added edge edgeB from a to b in graph1
+
+the children of a in graph1 are: b(edgeA) b(edgeB)

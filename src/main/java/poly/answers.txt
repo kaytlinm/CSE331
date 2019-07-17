@@ -1,0 +1,158 @@
+CSE 331 Homework 4.  Answers to written questions.
+Edit this file to supply your answers.
+
+Name:  Kaytlin Melvin
+
+Problem 0.
+
+(a) r = p * q:
+        set r = 0
+        {r = 0*x^2 + 0*x + 0}
+        {Inv: r = p_0*q + p_1*q + ... + p_j-1*q, where p_k is the kth term in p}
+        foreach term t_p in p:
+            {Inv: r = q_0*t_p + q_1*t_p + ... + q_i-1*t_p, where q_m is the mth term in q and t_p is a term in p}
+            foreach term t_q in q:
+                set t_r to product of t_q and t_p
+                add t_r into r {r = r + t_r}
+
+
+
+    r = p + t_q {adding term to polynomial}
+        set r = p by making term-by-term copy
+        while (t_r degree > t_q degree){
+            increment to next t_r
+        }
+        if degree of t_r is equal to degree of t_q
+            add t_q to t_r
+        else
+            insert t_q as new term in r
+
+
+
+(b) r = p / q:
+        set r = 0
+        set d = 0
+        set v = p
+        {Inv: r = p_0/q_0 + p_1/q_0 + ... + p_i-1/q_0, where p_j is the jth term in p}
+        while(highest degree of term in q <= highest degree of term of v){
+            set coefficient of t_r to quotient of the coefficients of v_0 and q_0
+            set degree of t_r to difference in degrees of v_0 and q_0
+            insert t_r into r as a new term
+
+            set d to product of t_r and all terms of q {d = t_r * q}
+            set v to difference of v and d {v = v - d}
+
+    r = t_p * q:
+        set r = 0;
+        {Inv: r = q_0*t_p + q_1*t_p + ... + q_i-1*t_p, where q_j is the jth term in q}
+        foreach t_q in q:
+            set t_r coefficient to product of coefficients of t_q and t_p
+            set t_r degree to sum of degrees of t_q and t_p
+            insert t_r into r as new term
+
+    r = p - q:
+        set r = p by making term-by-term copy of all items in p to r
+        {Inv: r = p - q_0 - q_1 - ... - q_i-1, where q_j is the jth term in q}
+        foreach term t_q in q:
+            if any term t_r in r has same degree as t_q,
+                then replace t_r with difference of coefficients of t_q and t_p
+            else insert t_q into r as new subtracted term (inverted sign)
+
+
+(c) p = x^3 + x - 1
+    q = x + 1
+    r = 0
+    d = 0
+    v = copy of p = x^3 + x - 1
+    while (highest degree of term in q <= highest degree of term of v){
+        ITERATION 1: r = 0, v = x^3 + x - 1, v_0 = x^3, q = x + 1, p = x^3 + x - 1
+        [loop condition SATISFIED because x degree <= x^3 degree]
+            t_r coeff. = 1 / 1 = 1
+            t_r deg. = 3 - 1 = 2
+            t_r = x^2
+            r = x^2
+
+            d = x^2*(x+1) = x^3 + x^2
+            v = (x^3 + x - 1) - (x^3 + x^2) = -x^2 + x - 1
+        ITERATION 2: r = x^2, v = -x^2 + x - 1, v_0 = -x^2, q = x + 1, p = x^3 + x - 1
+        [loop condition SATISFIED because x degree <= -x^2 degree]
+            t_r coeff. = -1 / 1 = -1
+            t_r deg. = 2 - 1 = 1
+            t_r = -x
+            r = x^2 - x
+
+            d = -x*(x+1) = -x^2 - x
+            v = (-x^2 + x - 1) - (-x^2 - x) = 2x - 1
+        ITERATION 3: r = x^2 - x, v = 2x - 1, v_0 = 2x, q = x + 1, p = x^3 + x - 1
+        [loop condition SATISFIED because x degree <= 2x degree]
+            t_r coeff. = 2 / 1 = 2
+            t_r deg. = 1 - 1 = 0
+            t_r = 2
+            r = x^2 - x + 2
+
+            d = 2*(x+1) = 2x + 2
+            v = (2x - 1) - (2x + 2) = -1
+        ITERATION 4: r = x^2 - x + 2, v = -1, v_0 = -1, q = x + 1, p = x^3 + x - 1
+        [loop condition FAILED because x degree !<= -1 degree]
+        done!
+        r = x^2 - x + 2
+
+
+
+Problem 1.
+
+(a) If the Rep Invariant was weakened as described, both the compareTo and equals methods would not be able
+    to properly compare values because it takes the numerators and denominators separately without checking
+    if they are reduced. The toString method would also be altered as it would have to reduce the rational
+    number before returning it in string form.
+
+
+(b) The spec requires non-negative denominators and reduced form and making this change doesn't allow there to be a verification
+    that the methods (sub, add, mul, div) meet the class specifications after computation. By returning a new RatNum with the
+    result, it will go through the checkRep that is in the RatNum constructor method.
+
+
+(c) It is sufficient to call checkRep at the end of the constructor only because all of the methods that would
+    or could alter RatNum to not satisfy the checkRep are returned as a new RatNum. By returning it as a new RatNum
+    it will go through the constructor method and ultimately checkRep.
+
+
+Problem 2.
+
+(a) I included calls to checkRep at the end of the constructor method and at the beginning of any methods that were passed a RatTerm argument.
+    I included it only at the end of the constructor method because all of my other methods return a boolean or a newly constructed RatTerm
+    so it would pass through the constructor anyways. I used it at the beginning of the methods that introduced RatTerm arguments to just
+    have more secure verification of new items being used.
+
+
+(b) Changing the Rep Inv would specifically alter the constructor, toString and getExpt methods. The constructor method
+    would not need to handle a zero coefficient case where as the toString method would have to include a zero case in order
+    to not permit a RatTerm with a zero coefficient to be printed. The getExpt method would need to handle a zero case in the situation
+    that if somebody is looking for the highest exponent, a zero coefficient should return a zero exponent.
+
+
+(c) Changing the Rep Inv would only alter the constructor method because it would have implement a case check that if a
+    coefficient is NaN then set the RatTerm's exponent to 0. I prefer the coeff.equals(RatNum.ZERO) -> exp = 0 invariant
+    because as mentioned in part b above, handling it as a rep invariant in the constructor eliminates having to handle it
+    in other methods such as toString and getExpt. The coeff.isNaN() -> exp = 0 invariant is unnecessary because it would be
+    adding a check case to the constructor when in all other methods if the coefficient isNaN() it return NaN regardless
+    of the value of the exponent.
+
+
+Problem 3.
+(a) I included checkRep's at the end of the method before the return statement. I included this in methods that did not
+    return a new RatPoly but instead returned a modified RatPoly. In methods where a new RatPoly was returned, it would
+    go through the constructor method before returning, therefore passing a checkRep. By returning a modified RatPoly, it
+    never goes through a constructor and therefore checkRep, after modification so I included a checkRep before returning it and after modifying it.
+
+(b) I prefer using representing a RatPoly as one list of RatTerms due to the disadvantages of using two lists (one for coefficients
+    and one for exponents). Using two lists requires more iterations to find the data for a RatTerm and complicates simple
+    math computations between RatTerms. Using one list streamlines all math while also representing all the data clearly.
+
+
+Problem 5.
+8*x^3+4*x-2
+x^2-1
+7*x+3
+9*x^4+3*x^2-6
+

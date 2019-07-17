@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="pathfinder.specTest.ScriptFileTests" tests="8" skipped="0" failures="0" errors="0" timestamp="2019-05-25T00:59:53" hostname="attu2.cs.washington.edu" time="0.797">
+  <properties/>
+  <testcase name="checkAgainstExpectedOutput[0]" classname="pathfinder.specTest.ScriptFileTests" time="0.695"/>
+  <testcase name="checkAgainstExpectedOutput[1]" classname="pathfinder.specTest.ScriptFileTests" time="0.06"/>
+  <testcase name="checkAgainstExpectedOutput[2]" classname="pathfinder.specTest.ScriptFileTests" time="0.006"/>
+  <testcase name="checkAgainstExpectedOutput[3]" classname="pathfinder.specTest.ScriptFileTests" time="0.006"/>
+  <testcase name="checkAgainstExpectedOutput[4]" classname="pathfinder.specTest.ScriptFileTests" time="0.006"/>
+  <testcase name="checkAgainstExpectedOutput[5]" classname="pathfinder.specTest.ScriptFileTests" time="0.008"/>
+  <testcase name="checkAgainstExpectedOutput[6]" classname="pathfinder.specTest.ScriptFileTests" time="0.006"/>
+  <testcase name="checkAgainstExpectedOutput[7]" classname="pathfinder.specTest.ScriptFileTests" time="0.006"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="marvel.specTest.ScriptFileTests" tests="7" skipped="0" failures="0" errors="0" timestamp="2019-05-25T00:59:54" hostname="attu2.cs.washington.edu" time="2.142">
+  <properties/>
+  <testcase name="checkAgainstExpectedOutput[0]" classname="marvel.specTest.ScriptFileTests" time="0.015"/>
+  <testcase name="checkAgainstExpectedOutput[1]" classname="marvel.specTest.ScriptFileTests" time="0.132"/>
+  <testcase name="checkAgainstExpectedOutput[2]" classname="marvel.specTest.ScriptFileTests" time="1.948"/>
+  <testcase name="checkAgainstExpectedOutput[3]" classname="marvel.specTest.ScriptFileTests" time="0.007"/>
+  <testcase name="checkAgainstExpectedOutput[4]" classname="marvel.specTest.ScriptFileTests" time="0.017"/>
+  <testcase name="checkAgainstExpectedOutput[5]" classname="marvel.specTest.ScriptFileTests" time="0.006"/>
+  <testcase name="checkAgainstExpectedOutput[6]" classname="marvel.specTest.ScriptFileTests" time="0.012"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

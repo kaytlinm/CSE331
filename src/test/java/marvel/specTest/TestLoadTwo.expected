@@ -1,0 +1,7 @@
+#Tests that two independent graphs can be loaded from two independent .tsv files
+
+loaded graph graph1
+loaded graph graph2
+
+the children of Bob in graph1 are: Cole(vol1) Erin(vol4) Sue(vol1)
+the children of Ernst-the-Bicycling-Wizard in graph2 are: Grossman-the-Youngest-of-them-all(CSE331) Notkin-of-the-Superhuman-Beard(CSE331) Notkin-of-the-Superhuman-Beard(CSE403) Perkins-the-Magical-Singing-Instructor(CSE331)

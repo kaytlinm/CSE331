@@ -1,0 +1,10 @@
+#Tests that a path can be found between two nodes that have intermediate connections (1 single edge)
+
+created graph graph
+added node B to graph
+added node C to graph
+added node D to graph
+added edge e from B to C in graph
+
+path from B to C:
+B to C via e

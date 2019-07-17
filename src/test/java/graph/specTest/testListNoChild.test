@@ -1,0 +1,6 @@
+#List No Child Test File
+#Testst that a graph can be created and a single node with no children can be added and prints no children
+
+CreateGraph graph1
+AddNode graph1 node1
+ListChildren graph1 node1

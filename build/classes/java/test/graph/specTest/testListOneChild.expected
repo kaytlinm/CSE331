@@ -1,0 +1,8 @@
+#List One Child Test File
+#Tests that a graph can be created, a node pair connected by one edge can print out the singular child.
+
+created graph graph1
+added node a to graph1
+added node b to graph1
+added edge e1 from a to b in graph1
+the children of a in graph1 are: b(e1)

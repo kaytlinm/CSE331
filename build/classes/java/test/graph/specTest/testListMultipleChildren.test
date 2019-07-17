@@ -1,0 +1,15 @@
+#List Multiple Children Test File
+#Tests that a graph can be created, and a set of nodes and edges can be added in the formation of a tree (one parent node
+#with multiple children nodes) can print out multiple children.
+
+CreateGraph graph1
+AddNode graph1 a
+AddNode graph1 b
+AddNode graph1 c
+AddNode graph1 d
+
+AddEdge graph1 a b edgeB
+AddEdge graph1 a c edgeC
+AddEdge graph1 a d edgeD
+
+ListChildren graph1 a

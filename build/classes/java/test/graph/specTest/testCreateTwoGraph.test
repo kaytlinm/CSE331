@@ -1,0 +1,5 @@
+#Create Two Graphs Test File
+#Tests that two different graphs can be created
+
+CreateGraph g1
+CreateGraph g2

@@ -1,0 +1,4 @@
+#Tests that a singular graph can be loaded from a .tsv file
+
+LoadGraph graph1 smallTest.tsv
+ListChildren graph1 Bob

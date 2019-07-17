@@ -1,0 +1,8 @@
+#List Multiple Test File
+#Tests that a graph can be created, multiple (3) nodes can be added and printed out.
+
+CreateGraph graph1
+AddNode graph1 a
+AddNode graph1 b
+AddNode graph1 c
+ListNodes graph1

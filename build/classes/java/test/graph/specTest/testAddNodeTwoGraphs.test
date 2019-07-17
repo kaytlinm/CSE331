@@ -1,0 +1,7 @@
+#Add Same Node to Two Graphs Test File
+#Tests that two graphs can be created and that the same node can be added to the graphs separately
+
+CreateGraph graph1
+CreateGraph graph2
+AddNode graph1 node1
+AddNode graph2 node1

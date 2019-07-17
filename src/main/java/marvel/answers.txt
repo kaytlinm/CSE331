@@ -1,0 +1,9 @@
+CSE 331 Homework.  Answers to written questions.
+Edit this file to supply your answers.
+
+Name:  Kaytlin Melvin
+
+Briefly describe any changes made to your Graph ADT from HW 3-4 and why
+those changes were made below.  (See the HW6 assignment for details.)
+
+I made no major changes to my Graph ADT aside from minor alterations such as the checkRep and loop formations.

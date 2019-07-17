@@ -1,0 +1,117 @@
+CSE 331 Homework.  Answers to written questions.
+Edit this file to supply your answers.
+
+Name:  Kaytlin Melvin
+
+Problem 1. (Written exercises)
+
+(a) Abstraction Function IntQueue1:
+        AF(r) = IntQueue1 q such that
+            entries = elements in q
+            entries.get(0) = front
+            entries.size - 1 = end
+
+    Representation Invariant IntQueue1:
+        forall i indices, entries.get(i) != null
+
+
+    Abstraction Function IntQueue2:
+        AF(r) = IntQueue2 q such that
+            entries = elements in q
+            front = first element in list and first to be removed
+            size = number of elements in q
+            front + size - 1 = end
+
+    Representation Invariant IntQueue2:
+        forall i indices, entries.get(i) != null
+        size != null
+        entries != null
+        front != null
+
+(b) Group 1: a, g, d. Group 2: b, h. Group 3: c, f. Group 4: e.
+
+(c) 1 - This method does not expose the rep because it returns an int. An int type is an immutable
+        reference and therefore does not give the client access to the representation data.
+
+    2 - This method could expose the rep because it returns a String[]. A String[] is a mutable
+        data type and therefore provides access to the client.
+
+    3 - This method could not expose the rep because of its private status. The private method does
+        not allow immediate access in an isolated state.
+
+    4 - This method could not expose the rep as it returns a String. A String data type is
+        immutable as it is a reference to a set of characters that is not able to change.
+
+    5 - This method could expose the rep as the Iterator returns an Integer. An Integer is a
+        wrapper class that changes an int reference into an Integer object, which is mutable to
+        the client.
+
+    6 - This method could expose the rep due to its constructor properties assuming it is a proper
+        constructor. As a constructor, it initializes and gives the client access to the fields of
+        the class.
+
+
+Problem 2.  (Graph interface/operations)
+    Edge Class - I decided to include a separate Edge class because when I was visualizing
+                implementing the Graph class, I saw the Edge component as a separate Object with
+                it's own behavior. In addition, it allowed other objects such as Graph and Node
+                to interact with Edge with a more defined structure and bounds as well as allows
+                more isolated testing to ensure that an Edge is behaving correctly.
+    Node Class - I decided to include a separate Node class because much like the Edge class, I
+                wanted to be able to interact with a Node object in an isolated environment.
+                Establishing Node characteristics outside of the Graph class allowed the Node and
+                Edge relationship to be controlled without affecting the structure of a Graph as
+                well as allows more isolated testing to ensure that a Node is behaving correctly.
+    Graph Class -
+        Constructor - The constructor method was necessary to create the instance of a Graph object.
+        addNode - I included the addNode method to support the mutability and spec of the Graph
+                  object and to allow the addition of new nodes to the graph.
+        addEdge - Similar to addNode, addEdge was necessary to satisfy the spec and mutability of
+                  Graph. Being able to add edges allows the client to connect nodes and
+                  ultimately create a complete Graph structure.
+        deleteNode - I included a deleteNode method to work compatibly with addNode in case the
+                    the client started creating a graph or added a node with unintended data.
+        deleteEdge - I included a deleteEdge method for the same reasons as deleteNode, to sustain
+                    the mutability of the Graph object and allow the client flexibility when
+                    creating a graph and connecting nodes.
+        findPath - I included a findPath method because of the directed-ness of the Graph class
+                   and finding a path is a generic operation of a graph structure. I wanted the
+                   client to be able to find connections between nodes given direction matters
+                   in the Graph class.
+        listNodes - I included listNodes for the client to be able to view the nodes available to
+                    access in the Graph class they are working with. I also included listNodes
+                    to aid in testing as it would help to verify other operations such as
+                    add and delete.
+        listEdges - I included listEdges for the client to be able to view all the edges(connections)
+                    in the graph. I also included listEdges to aid in testing graph operations that
+                    involved edges such as adding and deleting.
+        checkRep - I included a checkRep method that verify that the representation invariant
+                    is not violated.
+
+Problem 3.  (Testing strategy)
+       My general testing strategy followed a zero, one, many approach for both spec and
+       implementation testing. I first categorized cases based on operations such as add
+       operations, delete operations and list operations. Within the operation cases,
+       I created possible graphs on paper that were representations of zero objects, one object and
+       many objects. For example, an operation case I used was adding a node. Within that
+       operation case, I tested adding one node to a graph with no nodes, adding one node
+       to a graph with one node and adding a node to a graph with many nodes. I used this strategy
+       for both spec and implementations testing.
+
+       I wrote my spec tests following a black-box testing implementation while my implementation
+       tests followed a clear-box strategy. I wrote my spec tests using black-box testing because
+       spec tests are designed to test the specifications of the class without the knowledge of
+       all the literal operations available within the class. Black-box tests follow this same
+       path of knowledge as they are written with the intent of only testing operations described
+       within the specification. My implementation tests were written with a clear-box testing view
+       as the intention of implementation tests is to test every operation within the class. Due
+       to the general specification not describing all operations in detail, each operation can
+       not be tested in spec tests. I then wrote my implementation tests with the mindset of
+       knowing exactly what each operation should be returning and executing.
+
+
+
+
+
+
+

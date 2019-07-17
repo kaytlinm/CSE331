@@ -1,0 +1,6 @@
+#Add Node Pair Test File
+#Tests that a graph can be created and two different nodes can be added to the graph
+
+CreateGraph graph1
+AddNode graph1 node1
+AddNode graph1 node2

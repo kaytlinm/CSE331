@@ -1,0 +1,6 @@
+#List No Child Test File
+#Testst that a graph can be created and a single node with no children can be added and prints no children
+
+created graph graph1
+added node node1 to graph1
+the children of node1 in graph1 are:

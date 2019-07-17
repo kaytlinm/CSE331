@@ -1,0 +1,12 @@
+#Tests that a path can be found between two nodes that are separated by one node.
+
+CreateGraph graph
+AddNode graph B
+AddNode graph C
+AddNode graph D
+AddEdge graph B C x
+AddEdge graph C D y
+ListChildren graph B
+ListChildren graph C
+
+FindPath graph B D

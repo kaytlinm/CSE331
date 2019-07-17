@@ -1,0 +1,7 @@
+#Add Self Edge Test File
+#Tests that a graph can be created, a node can be added and that an edge can be added with
+#the same source node and destination node.
+
+created graph graph1
+added node node1 to graph1
+added edge edge1 from node1 to node1 in graph1
